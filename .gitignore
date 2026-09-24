@@ -16,6 +16,9 @@ dist-ssr
 .nitro
 *.local
 
+deploy.zip
+lambda_build
+
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars

@@ -10,8 +10,10 @@ export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
-    server: { entry: "server",
+    server: { 
+      entry: "server",
       port: 3000, // default is 3000, but we set it explicitly to avoid conflicts with other local services
-     },
+      preset: "aws-lambda" // ده السطر اللي ضفناه عشان نلغي الـ Cloudflare ونطلع كود لأمازون
+    },
   },
 });
